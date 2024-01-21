@@ -1,4 +1,6 @@
 # InStock Inventory Management System Project
+### IMAGES:
+https://imgur.com/a/Q3urVYK
 
 ## Project Overview
 
