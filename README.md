@@ -16,8 +16,7 @@ The project follows Agile methodologies, resembling a collaborative team structu
 - **Technologies**: create-react-app, react-router-dom, Node, Express, MySQL, Knex, BEM/SASS, npm, Postman.
 - **Browser Development Tools**: Used for debugging and inspecting code during development.
 
-## Teamwork Requirements
-
+## Teamwork
 - Each team member took an equal share of front-end/back-end tasks.
 - Worked through and completed assigned Jira tickets.
 - Maintained effective communication between team members regarding progress, dependencies, and implementation details.
