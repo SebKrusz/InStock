@@ -1,0 +1,21 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts";
+
+.footer{
+   margin: 2.5rem auto;
+   order: 2;
+
+   @include tablet{
+        margin:2rem;
+   }
+   
+    &__text{
+        @include body-3;
+        padding: 2.5rem auto;
+
+        @include tablet{
+            @include tablet-body-3;
+        }
+    }
+}

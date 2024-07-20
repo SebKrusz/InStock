@@ -1,0 +1,314 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+.warehouselist {
+
+}
+
+.warehouselist__container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: auto;
+    z-index: 1;
+    background-color: $primary-white;
+    position: relative;
+    margin: -4rem 2rem 0 2rem;
+
+
+    @include tablet {
+       
+        margin: -6.5rem 2rem 4rem 2rem;
+
+    }
+
+    @include desktop {
+        margin: -7rem 8.125rem 6rem 8.125rem;
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 16px 20px 16px;
+        border-bottom: 1px solid $secondary-light;
+
+        @include tablet {
+            padding-top: 30px;
+            padding-right: 50px;
+            padding-bottom: 30px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        @include desktop {
+            padding-top: 40px;
+            padding-right: 60px;
+            padding-bottom: 30px;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &-search {
+        border-radius: 20px;
+        height: 38px;
+        border: 1px solid $secondary-light;
+        color: $secondary-dark;
+        background-image: url("../../assets/icons/search-24px.svg");
+        background-repeat: no-repeat;
+        background-position: right;
+        padding-left: 10px;
+
+        @include tablet {
+            border-radius: 20px;
+            padding-left: 15px;
+            width: 185px;
+            margin: 0;
+        }
+
+        @include desktop {
+            border-radius: 20px;
+            padding-left: 30px;
+            width: 274px;
+            margin: 0;
+        }
+
+        &:focus{
+            border: 1px solid $primary-blue;
+        }
+    }
+
+    &-button {
+        border-radius: 20px;
+        background-color: $primary-blue;
+        color: $primary-white;
+        border: none;
+        height: 38px;
+        text-align: center;
+        margin: 15px 0px 0px 0px;
+
+        @include tablet {
+            border-radius: 20px;
+            margin: 0px 0px 0px 20px;
+            padding: 0px 15px;
+        }
+
+        @include desktop {
+            border-radius: 20px;
+            margin: 0px 0px 0px 20px;
+            padding: 0px 15px;
+        }
+    }
+
+    &-search:active {
+        border: 1px solid $primary-blue;
+    }
+
+    &-titlebox {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &-title {
+        padding-left: 16px;
+        font-weight: 600;
+        padding-top: 20px;
+        margin-bottom: 10px;
+
+        @include tablet {
+            padding-left: 32px;
+        }
+
+        @include desktop {
+            padding-left: 50px;
+            padding-top: 20px;
+        }
+    }
+
+    &-headers {
+        padding-left: 50px;
+        display: none;
+
+        @include tablet {
+            display: grid;
+            grid-template-columns: [first] 20.5% [line2] 21% [line3] 20% [line4] 27% [line5] 18% [col4-start] 5%;
+            padding-left: 32px;
+            height: 40px;
+            background-color: $background-light;
+        }
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: [first] 20% [line2] 27% [line3] 18% [line4] 24.5% [line5] 14% [col4-start] 19%;
+            padding-left: 50px;
+            background-color: $background-light;
+        }
+    }
+
+    &-titles {
+        text-transform: uppercase;
+        color: $secondary-dark;
+        font-weight: 600;
+        font-size: 12px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+            font-size: 12px;
+        }
+
+        @include desktop {
+            font-size: 13px;
+        }
+    }
+
+    &-itemlist {
+        padding-left: 16px;
+        border-bottom: 1px solid $secondary-light;
+
+        @include tablet {
+            display: grid;
+            grid-template-columns: [first] 49% [line2] 52%;
+            padding-left: 32px;
+        }
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: [first] 60% [line2] 35%;
+            padding: 0px 0px 0px 50px;
+        }
+    }
+
+    &-columnbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 80px 0px 0px;
+
+        @include tablet {
+            display: grid;
+            grid-template-columns: [first] 110% [line2] 110%;
+        }
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: [first] 90% [line2] 80%;
+        }
+    }
+
+    &-column {
+        @include tablet {
+            display: grid;
+            grid-template-columns: [first] 48% [line2] 50% [line3] 100%;
+        }
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: [first] 42% [line2] 55% [line3] 100%;
+        }
+    }
+
+    &-headertitle {
+        text-transform: uppercase;
+        color: $secondary-dark;
+        font-weight: 600;
+        font-size: 12px;
+        @include tablet {
+            display: none;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &-link {
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    &-item {
+        color: $primary-blue;
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+            font-size: 14px;
+        }
+
+        @include desktop {
+            font-size: 14px;
+            margin-top: 30px;
+        }
+    }
+
+    &-items {
+        font-size: 14px;
+        font-weight: 400;
+        color: $background-dark;
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+            font-size: 14px;
+            padding-right: 40px;
+        }
+
+        @include desktop {
+            font-size: 15px;
+            padding-right: 0px;
+        }
+    }
+
+    &-imagebox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 16px;
+        margin-bottom: 15px;
+        width: 100%;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            margin: 0px;
+        }
+
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            margin: 0px;
+        }
+    }
+
+    &-icons {
+        @include tablet {
+            padding: 0px 8px;
+        }
+        @include desktop {
+            padding: 0px 8px;
+        }
+    }
+
+    &-itemlist:hover {
+        cursor: pointer;
+        @include desktop {
+            background-color: rgba(46, 102, 229, 0.07);
+        }
+    }
+}

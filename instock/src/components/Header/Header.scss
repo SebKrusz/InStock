@@ -1,0 +1,102 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts";
+
+.header{
+    background: $background-dark;
+    display: flex;
+    flex-direction: column;
+    padding:1rem 1rem 6rem 0rem;
+    // position: absolute;
+    // top: 0;
+    // width:100%;
+
+    @include tablet{
+        flex-direction: row;
+        padding: 1rem 2rem 8rem 2rem;
+        justify-content: space-between;
+    }
+
+    @include desktop{
+        padding: 1rem 0rem 8rem 0rem;
+    }
+
+    &__box{     
+
+        &-logo{
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+            height: 1.75rem;
+
+            @include tablet{
+                padding: 1rem 1rem 1rem 0.5rem;
+            }
+
+            @include desktop{
+                padding: 1rem 1rem 1rem 6rem;
+            }
+        }
+    }
+
+    &__container{
+        @include tablet {
+            padding-right: 0rem;
+            }
+        @include desktop {
+        padding-right: 5rem;
+        }
+        &-nav{
+            display:flex;
+            flex-direction: row;
+            justify-content:space-between;
+            padding-left: 0px;
+
+            @include tablet {
+                justify-content:space-around;
+
+            }
+
+            @include desktop {
+                justify-content:space-around;
+
+            }
+
+            &-box{
+                text-decoration: none;
+                list-style-type: none; 
+        
+                
+                &-link {
+                    @include heading-3;
+                    cursor: pointer;
+                    display: inline-block;
+                    cursor: pointer;
+                    vertical-align:-webkit-baseline-middle;
+                    background-color: $background-dark;
+                    border-width: 0;
+                    padding: 0rem 1rem;
+
+                    // &:hover{
+                    //     text-decoration-line: underline;
+                    // }
+
+                    @include tablet{
+                        @include tablet-heading-3;
+                    }
+            
+                    &--selected {
+                      background-color: $primary-black;
+                      border-radius: 20px;
+                      text-align: center;
+                      line-height: 36px;
+
+                    //   &:hover{
+                    //     text-decoration-line: underline;
+                    //     }
+                    }
+                }
+            }
+        }
+    }
+}

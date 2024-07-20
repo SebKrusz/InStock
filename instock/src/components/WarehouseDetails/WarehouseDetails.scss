@@ -1,0 +1,440 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+
+.warehousedetails {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: auto;
+    z-index: 1;
+    background-color: $primary-white;
+    margin: -4rem 1rem 0 1rem;
+
+    @include tablet {
+        margin: -6.5rem 2rem 4rem 2rem;
+    }
+
+    @include desktop {
+        margin: -7rem 8.125rem 6rem 8.125rem;
+    }
+}
+.warehousedetails__container {
+    &-headingbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid #bdc5d5;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 1px solid #bdc5d5;
+        }
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 1px solid #bdc5d5;
+        }
+    }
+
+    &-back {
+        margin-top: 40px;
+
+        @include tablet {
+            margin-top: 35px;
+            height: 24px;
+        }
+
+        @include desktop {
+            margin-top: 40px;
+            height: 24px;
+        }
+    }
+
+    &-titlebox {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: row;
+
+        @include tablet {
+            padding-left: 30px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        @include desktop {
+            padding-left: 50px;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    &-title {
+        padding-left: 10px;
+        font-size: 32px;
+        font-weight: 600;
+
+        @include tablet {
+            padding-left: 10px;
+            font-size: 32px;
+        }
+
+        @include desktop {
+            padding-left: 10px;
+            font-size: 32px;
+            margin-bottom: 13px;
+        }
+    }
+
+    &-button {
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        background-color: #2e66e5;
+        color: white;
+        border: none;
+        height: 38px;
+        margin: 30px 25px 0px 0px;
+    
+        @include tablet {
+            padding: 0px 15px 10px 15px;
+            margin: 21px 30px 0px 20px;
+        }
+    
+        @include desktop {
+            margin-left: 20px;
+            padding: 0px 15px 10px 10px;
+            margin-top: 30px;
+        }
+    }
+
+    &-buttontext {
+        display: none;
+        border-radius: 50%;
+
+        @include tablet {
+            display: inline;
+            padding-top: 10px;
+        }
+
+        @include desktop {
+            display: inline;
+            padding-top: 10px;
+        }
+    }
+
+    &-buttonimage {
+        height: 20px;
+        margin-right: 5px;
+
+        @include desktop {
+            margin-top: 5px;
+        }
+    }
+}
+
+.warehousedetails-table {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        margin: 0px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #5c667e;
+        line-height: 18px;
+
+        @include desktop {
+            font-size: 12px;
+        }
+    }
+
+    &__text {
+        margin: 0px;
+        padding: 0px 0px 5px 0px;
+        font-size: 13px;
+        line-height: 22px;
+        color: #13182c;
+
+        @include desktop {
+            font-size: 14px;
+        }
+    }
+
+    &__addresstext {
+        margin: 0px;
+        padding: 0px 0px 20px 0px;
+        font-size: 13px;
+        line-height: 22px;
+        color: #13182c;
+
+        @include tablet {
+            width: 120px;
+        }
+        @include desktop {
+            font-size: 14px;
+        }
+    }
+
+    &__leftitems {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        border-right: 1px solid #bdc5d5;
+        margin-top: 20px;
+        margin-bottom: 0px;
+
+        @include tablet {
+            padding-left: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-right: 20px;
+            width: 100%;
+        }
+
+        @include desktop {
+            padding-left: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-right: 50px;
+            width: 100%;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: row;
+
+        @include tablet {
+            margin-left: 20px;
+        }
+        @include desktop {
+            margin-left: 20px;
+        }
+    }
+
+    &__rightitems {
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+        margin: 0px 0px 0px 0px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        border-bottom: 1px solid #bdc5d5;
+
+        @include tablet {
+            padding-left: 20px;
+            margin: 20px 0px 20px 0px;
+            padding-right: 50px;
+            width: 100%;
+            border-bottom: none;
+        }
+
+        @include desktop {
+            padding-left: 20px;
+            margin: 20px 0px 20px 20px;
+            padding-right: 50px;
+            width: 100%;
+            border-bottom: none;
+        }
+    }
+
+    &-text {
+        @include tablet {
+            padding-right: 40px;
+        }
+        @include desktop {
+            padding-right: 70px;
+        }
+    }
+}
+
+.inventorydetails__table {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-heading {
+        text-transform: uppercase;
+        margin: 0px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #5c667e;
+        line-height: 18px;
+
+        @include desktop {
+            font-size: 12px;
+        }
+    }
+
+    &-text {
+        margin: 0px;
+        padding: 0px 0px 25px 0px;
+        font-size: 13px;
+        line-height: 22px;
+        color: #13182c;
+
+        @include desktop {
+            font-size: 14px;
+        }
+    }
+
+    &-leftitems {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 20px;
+        border-right: 1px solid #bdc5d5;
+        margin-top: 20px;
+        margin-bottom: 0px;
+
+        @include tablet {
+            padding-left: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-right: 20px;
+            width: 100%;
+        }
+
+        @include desktop {
+            padding-left: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-right: 50px;
+            width: 100%;
+        }
+    }
+
+    &-box {
+        @include tablet {
+            margin-left: 20px;
+        }
+        @include desktop {
+            margin-left: 20px;
+        }
+    }
+
+    &-quantitybox {
+        margin-left: 70px;
+
+        @include tablet {
+            margin-left: 100px;
+        }
+
+        @include desktop {
+            margin-left: 140px;
+        }
+    }
+
+    &-rightitems {
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+        margin: 0px 0px 0px 0px;
+        padding-right: 20px;
+
+        @include tablet {
+            padding-left: 20px;
+            margin: 20px 0px 20px 0px;
+            padding-right: 50px;
+            width: 100%;
+        }
+
+        @include desktop {
+            padding-left: 20px;
+            margin: 20px 0px 20px 20px;
+            padding-right: 50px;
+            width: 100%;
+        }
+    }
+
+    &-stock {
+        padding: 4px 0px 0px 0px;
+        text-transform: uppercase;
+        text-align: center;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0px 0px 10px 0px;
+
+        @include tablet {
+            font-size: 12px;
+            margin: 0px 0px 30px 0px;
+        }
+
+        @include desktop {
+            font-size: 13px;
+        }
+
+        &.instock {
+            background-color: rgba(21, 132, 99, 0.07);
+            color: $support-green;
+            width: 65px;
+
+            @include tablet {
+                width: 60px;
+            }
+
+            @include desktop {
+                width: 70px;
+            }
+        }
+
+        &.outofstock {
+            background-color: rgba(201, 69, 21, 0.07);
+            color: $support-red;
+            width: 90px;
+
+            @include tablet {
+                width: 90px;
+            }
+
+            @include desktop {
+                width: 95px;
+            }
+        }
+    }
+
+    &-headers {
+        padding-left: 50px;
+        display: none;
+
+        @include tablet {
+            display: grid;
+            grid-template-columns: [first] 20.5% [line2] 21% [line3] 20% [line4] 27% [line5] 18% [col4-start] 5%;
+            padding-left: 32px;
+            height: 40px;
+            background-color: $background-light;
+        }
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: [first] 20% [line2] 27% [line3] 18% [line4] 24.5% [line5] 14% [col4-start] 19%;
+            padding-left: 50px;
+            background-color: $background-light;
+        }
+    }
+}
+

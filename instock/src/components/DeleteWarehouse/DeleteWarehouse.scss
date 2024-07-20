@@ -1,0 +1,128 @@
+@use '../../styles/partials/mixins' as *;
+
+
+.warehouse-list{
+  opacity: 0.1;
+  position:relative;
+  display: none;
+
+  @include tablet{
+    opacity: 0.2;
+    background: rgba(0, 0, 0, 0.5); 
+    display: block;
+  }  
+  
+}
+
+.delete-item-card {
+    
+    background-color: #fff;
+    z-index: 2;
+    padding: 16px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column; 
+    margin: 0 auto; 
+    height: 100vh;
+    position: absolute;
+    top:0;
+    
+        @include tablet{
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        margin-top: 23%;
+        width: 80%;
+        left: 1.5rem;
+        right: 1.5rem;
+        height: 270px ;
+        }
+
+        @include desktop{
+          width:60%;
+          margin-top: 14%;
+        }
+    
+  }
+
+  .delete-item-card__title{
+    margin-top: 60px;
+    margin-bottom: 0px;
+    color: #13182C;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    word-wrap: break-word
+  }
+
+  .delete-item-card__text{
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    word-wrap: break-word
+  }
+
+  .delete-item-card__buttons{
+    margin-top: 375px;
+    bottom: 5%;
+    display: flex;
+    justify-content: space-around   ;
+    padding-bottom: 24px;
+    background-color: #fff;
+    @include tablet {
+        margin-top: 40px;
+        justify-content: flex-end;
+    }
+  }
+
+  .delete-item-card__button--one{
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    word-wrap: break-word;
+    background-color: white;
+    border-radius: 20px;
+    padding-left: 63px; 
+    padding-right: 63px;
+    height: 3rem;
+    border: none;
+    margin-right: 25px;
+    color: #5C667E;
+    border: #5C667E 1px solid;
+    @include tablet {
+        padding-left: 16px;
+        padding-right:16px ;
+        height: 2.5rem; 
+    }
+  }
+
+  .delete-item-card__button--two{
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    word-wrap: break-word;
+    background-color: #C94515;
+    border-radius: 20px;
+    padding-left: 63px; 
+    padding-right: 63px;
+    height: 3rem;
+    border: none;
+    @include tablet {
+        padding-left: 16px;
+        padding-right:16px;
+        height: 2.5rem;
+    }
+   
+  }
+
+  .delete-item-card-body{
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 100vh;
+    
+  }
+

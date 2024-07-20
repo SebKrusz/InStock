@@ -1,0 +1,115 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+//Mobile 
+  //For h1 type headings
+  @mixin heading-1() {
+    font-family: "Titillium";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    color: $primary-black;
+  }
+
+  //For h2 type headings
+  @mixin heading-2(){
+    font-family: "Titillium";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    color: $primary-black;
+  }
+
+  //For header h3 : labels, links, and buttons
+  @mixin heading-3() {
+    font-family: "Titillium";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    color: $primary-white;
+    text-align:center;
+  }
+
+  //p2:type fonts 
+  @mixin body-2() {
+    font-family: "Titillium";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  //p3: body small (footer)
+  @mixin body-3(){
+    font-family: "Titillium";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: $secondary-dark;
+    text-align:center;
+  }
+
+
+
+
+  
+//tablet and desktop
+  //For h1 type headings for tablets
+  @mixin tablet-heading-1() {
+    font-family: "Titillium";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    color: $primary-black;
+  }
+
+  //For h2 type headings
+  @mixin tablet-heading-2(){
+    font-family: "Titillium";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    color: $primary-black;
+  }
+
+
+  //For header h3 : labels, links, and buttons
+  @mixin tablet-heading-3 {
+    @include heading-3();
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  //p2:type fonts for tablets
+  @mixin tablet-body-2() {
+    font-family: "Titillium";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  //For p3: body 3 small fonts : footer
+  @mixin tablet-body-3(){
+    @include body-3();
+    font-size: 12px;
+    line-height: 18px;
+  }

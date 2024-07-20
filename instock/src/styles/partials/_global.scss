@@ -1,0 +1,9 @@
+@use "../partials/variables" as *;
+@use "../partials/mixins" as *;
+@use "./fonts" as *;
+
+body {
+  font-family: "Titillium", sans-serif;
+  margin: 0;
+  padding: 0; 
+  }

@@ -1,0 +1,15 @@
+@use "./styles/partials/fonts";
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/global";
+
+.test{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.footer{
+    z-index:1;
+}
